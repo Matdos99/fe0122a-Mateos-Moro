@@ -1,0 +1,185 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+html{ width: 100%;
+    background-image: url(../img/sfondo.png);
+    text-align: center;
+    
+}
+h1{
+    text-align: left;
+}
+.centro{
+    text-align: left;
+    padding-top: 0px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
+}
+body p{
+    line-height: 25px;
+}
+
+/* HEADER freccie, dimensioni*/
+header{
+    background-image:linear-gradient(rgb(4, 127, 158) 40%, rgb(4, 84, 131));
+    box-shadow: #666 0px 1px 4px 2px;
+    text-align: center;
+    margin: 1.2em;
+    padding: 30px 18px 5px 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 19px
+}
+header ul {
+    margin-top: 16px;
+    list-style-type: none;
+    line-height: 27px;
+    }
+header img{
+width: 100%;
+margin-bottom: 30px;
+
+    
+}
+header div p{
+    text-align: center;
+}
+
+ li a{
+    text-decoration:none;
+    color: white;
+    text-align: center;
+}
+
+
+/* MAIN */
+main{
+    background-color: white;
+    padding: 30px;
+    margin:1.2em;
+    font-size: 18px;
+    
+}
+main p {
+    margin: 10px 0px;
+    text-align: left;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+.viola{
+    color: purple;
+}
+article i{color:rgb(190, 187, 187) ;}
+code{
+    background-color: rgb(214, 210, 210);
+    border-radius: 5px;
+}
+main h1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+section {
+    background-color: rgb(190, 187, 187);
+    padding: 30px;
+    margin: 40px 0px;
+}
+
+
+button[type=submit] {
+    background-color: rgb(44, 101, 206);
+    color: white;
+}
+h2{
+    text-align: left;
+}
+ol,ul{ padding: 10px 30px 30px 30px;}
+li{ margin:10px 0px;
+    line-height: 25px;
+}
+iframe{
+    border-radius: 30px;
+    width: 100%;
+    height: 180px;
+
+}
+#staccare{
+    margin: 22px 0px;
+}
+
+/* TABELLE, grassetto*/
+table caption{
+    font-style: italic;
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;  
+}
+th{
+    background-color: rgb(44, 101, 206);
+    border: white solid 0.5px;
+    padding: 30px;
+    color: white;
+    margin: 0% 95%;
+    
+}
+td{
+    padding: 15px 20px;
+    border-bottom: black solid 1px;
+    text-align: center;
+    
+}
+tr:nth-child(even){
+    background-color: rgb(189, 189, 189);
+}
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+aside div{
+    background-color: rgb(214, 210, 210);
+    padding: 30px;
+    margin: 20px 0px;
+    border: rgb(167, 167, 167) solid 1px;
+
+
+}
+aside {
+    text-align: left;
+}
+aside a{
+    font-weight: bold;
+}
+.big{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600 ;
+    text-align: center;
+    
+}
+.sotto{
+    text-align: right;
+    color: rgb(19, 18, 18);
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+/* FOOTER */
+footer{
+    background-image: linear-gradient(rgb(4, 97, 121) 40%, rgb(5, 66, 102));
+    height: 5em;
+    text-align: center;
+    padding: 30px;
+    margin: 1.2em;
+    color: white;
+}
+footer p {
+    text-align: center;
+}
+footer address{
+    text-align: center;
+}
+
+.pink{
+    color: palevioletred;
+    font-weight: bold;
+}
