@@ -34,6 +34,7 @@ header div img {
 header nav ul {
     margin: 0;
     
+    
 }
 header nav li {
     list-style: none;
@@ -53,6 +54,9 @@ header nav li a::before {
 }
 
 /* MAIN */
+#sopra{
+    display: none;
+}
 main {
     background-color: #fff;
     box-shadow: 0 3px 3px #444;
@@ -212,17 +216,24 @@ footer a {
 
 .uno{
     position: fixed;
-    top: 30px;
-    right: 20px;
-    color: coral;
+    top: 19em;
+    right: 5px;
+    color: rgb(205, 66, 218);
+    font-size: 30px;
+    
 }
 .due{
     position: fixed;
-    right: 20px;
-    color: coral;
+    right: 5px;
+    top: 15em;
+    color: rgb(23, 55, 235);
+
+    font-size: 30px;
 }
 .tre{
     position: fixed;
-    right: 20px;
-    color: coral;
+    right: 5px;
+    top: 16.5em;
+    font-size: 30px;
+    color: rgb(23, 55, 235);
 }
