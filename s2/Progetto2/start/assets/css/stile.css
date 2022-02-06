@@ -1,0 +1,601 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+html{
+    width: 100%;
+}
+body{
+    color: #000;
+    font-size: 1.5rem;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.8em;
+    
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em;
+    z-index: 2;
+    box-shadow: 0 1px 15px#000;
+}
+.logo{
+    z-index: 5;
+
+}
+header nav ul{
+    position: absolute;
+    top: 90px;
+    transition: height 0.5s ease-out;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    z-index: 1;
+    text-align:center;
+    height: 0;
+
+box-shadow: 0 8px 15px -6px#000;
+overflow: hidden;}
+
+.hamb{
+    display: none;
+}
+.hamb:checked ~ nav ul{
+    height: 190px;
+}
+.menu{
+    position: absolute;
+    top: 40%;
+    right: 5vw;
+    z-index: 2;
+    
+}
+
+ul li a{
+    color: #e42424;
+    text-decoration: none;
+}
+/*sistemare sfondoBig*/
+/* MAIN */
+.sottologo{
+    background-image: url(../images/banner.jpg);
+     background-size: cover;
+     background-position: center;
+     padding: 1em;
+}
+.sottologo > *{
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 2px #000;
+}
+.sottologo h1{
+    font-size: 2.5em;
+    line-height: 1.1em;
+    margin-top: 40px;
+}
+
+
+.pulse{
+    width: 5em;
+    font-size:1.9rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-image: linear-gradient(to right, #6cc1e2 30%, #392f7a);
+    text-shadow: 0 1px 2px #000;
+}
+.blue{
+    font-size:1.9rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    background-image: linear-gradient(to right, #6cc1e2 30%, #392f7a);
+    text-shadow: 0 1px 2px #000;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);}
+
+/* Pulse */
+
+@-webkit-keyframes pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  @keyframes pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  .pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+/*-------------------------------*/   
+strong{
+    text-transform: uppercase ;
+}
+
+
+.primameta, .meta, .secondmeta{
+    text-align: center;
+    padding: 1.5em;
+}
+h2{
+    color: black;
+    font-size: 2.7em;
+    margin: 35px 0;
+    line-height: 1.1em;
+}
+#bianco{
+    color: white;
+}
+
+.secondmeta img{
+    width: 100%;
+}
+
+h3{
+    font-size: 1.9em;
+    
+}
+
+
+.primameta div{
+    margin: 35px 0;
+}
+.primameta div > p{
+    margin-top: 25px;
+}
+.meta{
+    background-color: rgb(3, 3, 56);
+    color: white;
+    
+    padding: 12% 5% ;
+}
+.meta > * {
+    margin: 30px 0;
+}
+
+i{
+    color: #e42424;
+    font-size: 1.7em;
+}
+.secondmeta div{
+    margin: 20px 0;
+}
+
+h3 i {
+    font-size: 1.2em;
+}
+/*--------------contatti----------------*/
+.contattaci{ text-align: center;
+    justify-items: center;
+    padding: 1em;
+
+}
+
+.tab{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 350px;
+        clear: both;
+        margin:0 auto;
+    }
+        
+    .tab input{
+        width: 100%;
+        clear: both;
+        height: 60px;
+        margin-bottom: 15px;
+      }
+    .tab textarea{
+        width: 100%;
+        clear: both;
+        height: 160px
+    }
+
+
+.inform{
+    margin: 40px 0;
+    padding:  0 30px;
+}
+.inform > p{
+    margin-top: 25px;
+    
+}
+/*---------foglio chi siamo-------------*/
+#chi-siamo{
+    padding: 1em;
+    text-align: center;
+}
+
+
+div img{
+    width: 100%;
+}
+.mars{
+    margin-bottom: 40px;
+}
+.dipl{
+    margin-bottom: 30px;
+}
+.dipl p{
+    margin-bottom: 20px;
+}
+
+.tabellauno{
+    margin: 0 auto 2em;
+    text-align: left;
+    
+}
+
+#giallo{
+    width: 250px;
+}
+
+.tabellauno td{
+    padding-left:20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tabellauno td:first-of-type{
+    font-size: 1.55rem;
+    font-weight: bolder;
+}
+
+.azzuro{
+    background-color: #bbd0d8;
+}
+
+
+caption{
+    margin-bottom: 20px;
+}
+
+.tabelladue{margin: 0 auto 2em;
+    text-align: center;
+
+}
+.tabelladue{
+    display: none;
+    
+    
+}
+.tabelladue td {padding: 10px 40px;
+    border-right: 0.1px solid white;}
+th{
+    background-color: #6cc1e2;
+    padding: 10px 30px;
+    border-right: 0.1px solid white;
+}
+
+.tabelladue tr:nth-child(even){
+    background-color: #8fdfff;
+}
+strong{
+    text-transform: uppercase;
+    font-weight:bold ;
+    color: white;
+}
+
+/* FOOTER */
+h4{
+    font-size: 1.3em;
+}
+footer{
+    background-color: rgb(238, 238, 238);
+    padding: 1.5em;
+}
+footer > *{
+    margin-top: 30px;
+}
+.piede {
+    margin-top: 50px;
+}
+.piede > *{
+    margin-top: 20px;
+}
+
+footer > p {
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+article section div.titolodueMid{
+    margin: 40px 0;
+} 
+.inm{
+    margin-top: 50px;
+}
+
+#email{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+.email{
+    height: 50px;
+}
+/* RESPONSIVE */
+
+@media screen and (min-width:700px){
+    
+    header{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        
+    }
+   
+   .dilato{
+        display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    padding: 2em 0;
+    }
+
+ .sottologo{
+        padding: 4em 3em;
+}
+.sottologo h1{
+    font-size: 3em;
+}
+
+    .affianco{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 55px;
+        justify-content: space-evenly;
+    }
+
+    .primameta{
+        padding: 0 1.5em;
+} 
+        
+    .meta{
+        padding: 3em;
+    }
+    
+    .secondmeta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3,180px);
+        justify-content: center; 
+        justify-items: center;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 35px;
+        }
+       
+    .solaim{
+        grid-column-start:1 ;
+         grid-column-end: 2;
+         grid-row-start: 1;
+         grid-row-end: 4;
+         margin-top: 20px;
+    }
+    .titolodueMid1{
+        width:100%;
+        height: auto;
+         grid-column-start:2 ;
+         grid-column-end: 3;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         text-align: left;
+    }
+    .titolodueMid2{ width:100%;
+        height: auto;
+         grid-column-start:2 ;
+         grid-column-end: 3;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         text-align: left;
+    }
+    .titolodueMid3{ width:100%;
+        height: auto;
+         grid-column-start:2 ;
+         grid-column-end: 3;
+         grid-row-start: 3;
+         grid-row-end: 4;
+         text-align: left;
+    }
+    .inm{
+        text-align: center;
+    }
+    
+    .tabelladue{
+       margin:90px ;
+
+}
+
+.impaginazioneContat{ display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    align-items: center;
+    padding: 2em 0;   
+}
+.tab{width: 900px;
+    flex-grow:2 ;
+}
+.tab > *{
+    max-width: 400px;
+    width: 100%;
+}
+.tab2{
+    flex-grow:2 ;
+}
+
+.dipl{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+gap: 53px;
+
+}
+.tabellauno{
+display: none;
+}
+.tabelladue{
+    display: inline-table;
+    margin: 0 auto;
+}
+
+footer{ padding-top: 0px;
+
+}
+footer > * {
+    margin: 30px 60px;}
+    .piede{
+        width: 300px;
+    }
+    .inm{
+        text-align: center;
+    }
+    #chi-siamo{
+        padding: 0em 2em;
+        text-align: center;
+    }
+.dipl img{
+        width: 100%;
+        height: auto;}
+}
+
+
+@media screen and (min-width:900px){
+    header{
+        justify-content: space-around;
+    }
+    .marcato{font-size:1.9rem;
+        text-decoration: none;
+        padding: 10px 5px;
+        background-image: linear-gradient(to right, #6cc1e2 30%, #392f7a);
+        text-shadow: 0 1px 2px #000;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+    .tabelladue{
+        width: 800px;
+    } 
+    .menu{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        position: static;
+         flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        box-shadow: none;
+        list-style-type: none;
+    }
+    header ul li{
+        margin: 0 20px;
+        align-self: center;
+    }
+    ul li a{color: #000;}
+    .marcato a{
+        color: white;
+    }
+    
+
+}
+
+@media screen and (min-width:1200px){
+       
+    .sottologo{
+        padding: 4em 8em;
+        margin-bottom: 70px;
+}
+.primameta{
+    padding: 0 4em;
+}
+#picc{
+    width: 40em;
+    margin: 0 auto;
+}
+.picc1{
+    padding: 0 4em;
+}
+.mars{
+    width: 1113px;
+margin: 60px auto;
+}
+
+.tab > *{
+    max-width: 600px;}
+.tab textarea{
+    height: 100px;
+}
+
+#chi-siamo{
+    text-align: center;
+}
+.contattaci{
+    padding: 1em 7em;
+}
+.tabella{
+margin-top: 200px;
+margin-bottom: 70px;
+}
+
+footer {
+    padding: 0 7em
+}
+.tabelladue{
+    width:1000px;
+    height: 400px;
+}
+.dipl{
+    max-width:960px;
+    margin: 0 auto;
+}
+
+}
+ 
+@media screen and (min-width:2000px){
+    .mars{
+        width: 1400px;
+    margin: 60px auto;
+    }
+    .contattaci{
+        padding: 4em 18em;
+    }
+    .dipl{
+        max-width:1400px;
+        margin: 0 auto;
+    }
+
+    
+}
