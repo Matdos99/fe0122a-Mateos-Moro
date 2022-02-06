@@ -1,0 +1,68 @@
+main {
+    background-color: gray;
+    padding: 30px;
+    
+    display: grid;
+    grid-template-columns:repeat(4, 500px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 0;
+    justify-content: space-between; 
+    justify-items: center;
+    align-items: center;
+   
+    
+
+}
+div{
+    width: 400px;
+    height: 250px;
+    padding: 0px;
+    text-align: center;
+    box-shadow: 3px 5px 5px;
+    
+    }
+
+    
+.uno {
+    background-color: yellow;
+    background: linear-gradient(yellow 70%, rgb(179, 179, 45));
+    transform: rotate(-5deg);
+    transition-property:rotate;
+    transition-duration: 2s;
+}
+.uno:hover{ transform: rotate(0deg);
+    transform: scale(1.2);}
+
+    .due{
+        background-color: yellowgreen;
+        background: linear-gradient(greenyellow 70%, rgb(179, 179, 45));
+    }
+    .uno:hover{ transform: rotate(0deg);
+        transform: scale(1.2);}
+    .tre{
+        background-color: rgb(177, 145, 184);
+        background: linear-gradient(rgb(177, 145, 184) 70%, rgb(179, 179, 45));
+        transform: rotate(-5deg);
+    transition-property:rotate;
+    transition-duration: 2s;
+    }
+    .uno:hover{ transform: rotate(0deg);
+        transform: scale(1.2);}
+    .quat{
+        background-color: greenyellow;
+        background: linear-gradient(greenyellow 70%, rgb(125, 185, 35));
+        transform: rotate(-5deg);
+        transition-property:rotate;
+        transition-duration: 2s;
+    }
+    .uno:hover{ transform: rotate(0deg);
+        transform: scale(1.2);}
+    .cinque{
+        background-color: yellow;
+        background: linear-gradient(yellow 70%, rgb(179, 179, 45));
+        transform: rotate(-5deg);
+        transition-property:rotate;
+        transition-duration: 2s;
+    }
+    .cinque:hover{ transform: rotate(0deg);
+        transform: scale(1.2);}
