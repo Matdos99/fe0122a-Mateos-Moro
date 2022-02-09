@@ -1,0 +1,11 @@
+{
+  "name": "g1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/stile.scss css/stile.css -w"
+  },
+  "author": "mat",
+  "license": "ISC"
+}

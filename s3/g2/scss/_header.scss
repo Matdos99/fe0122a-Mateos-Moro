@@ -1,0 +1,28 @@
+$coloresfondo:black;
+$coloretestih:white;
+$marginealto:0 20px;
+$none:none;
+$centro:center;
+$marginealtro:30px 0;
+
+@mixin lista{
+    margin: $marginealto;
+    list-style-type: $none;
+}
+
+#header{
+    background-color: $coloresfondo;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+        a{
+            color: $coloretestih;
+            @include lista
+        }
+
+}
+
+#footer{
+    background-color: $coloresfondo;
+}

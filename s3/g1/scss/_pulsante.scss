@@ -1,0 +1,9 @@
+$colore-puls:purple;
+$dimensione:50px;
+$grandezza:0.5;
+
+input{
+    color: $colore-puls;
+    font-size: $dimensione;
+    transform: scale($grandezza);
+}

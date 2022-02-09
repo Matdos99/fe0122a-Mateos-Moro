@@ -1,0 +1,39 @@
+#header {
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around; }
+  #header a {
+    color: white;
+    margin: 0 20px;
+    list-style-type: none; }
+
+#footer {
+  background-color: black; }
+
+html {
+  width: 100%; }
+
+#content {
+  text-align: center; }
+  #content h1 {
+    font-size: 45px; }
+  #content h2 {
+    font-size: 35px; }
+  #content p {
+    margin: 0 20px;
+    line-height: 1.6em; }
+  #content .warning-button {
+    margin: 30px 0; }
+
+#sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%; }
+  #sidebar li {
+    margin: 30px 0;
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 8px; }

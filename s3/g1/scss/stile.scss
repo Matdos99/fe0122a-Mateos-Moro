@@ -1,0 +1,31 @@
+$colore: yellow;
+$colore2: red;
+$massimo:100%;
+$marginec: 0 auto;
+$centrare: center;
+$font-main: 30px-2;
+$font-title: $font-main+20px;
+
+html{
+    width: $massimo;
+}
+
+body{
+    background-color: $colore;
+}
+
+h1{
+    color: $colore2;
+    width: 80%;
+    font-size: $font-title;
+}
+@import 'pulsante';
+
+img{
+    margin: $marginec;
+    
+}
+
+p{
+    font-size: $font-main;
+}
