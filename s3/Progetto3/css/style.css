@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+#corpop {
+  text-align: center;
+  font-size: 1.3em;
+  background-color: #fffdfd;
+  color: black; }
+  #corpop h1 {
+    font-size: 1.9em;
+    color: #2a9315;
+    margin-bottom: 20px; }
+  #corpop h2 {
+    font-size: 1.7em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #2a9315; }
+  #corpop p {
+    font-family: "IBM Plex Sans Thai Looped", sans-serif; }
+  #corpop h3 {
+    text-align: left; }
+  #corpop #solo {
+    text-align: center;
+    color: black;
+    text-shadow: none; }
+  #corpop #corpop > * {
+    background-color: #fffdfd;
+    color: black; }
+
+h1, h2, h3 {
+  font-family: "Bungee", cursive; }
+
+i {
+  font-size: 25px;
+  color: white; }
+
+#impaginazione {
+  margin-top: 130px; }
+
+nav {
+  background-color: #2a9315;
+  color: white; }
+
+aside {
+  background-color: #fffdfd;
+  color: black;
+  margin: 50px 0;
+  width: 900px; }
+
+#footer {
+  background-color: #2a9315; }
+
+#spingialato {
+  text-decoration: none;
+  color: white; }
+
+#carta, #carta2 {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px; }
+
+#carta2 {
+  margin-top: 50px;
+  margin-bottom: 50px; }

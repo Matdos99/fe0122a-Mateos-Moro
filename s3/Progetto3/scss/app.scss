@@ -1,0 +1,99 @@
+@import 'function';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+$colore:white;
+$coloresf:rgb(42, 147, 21);
+$sotto:20px;
+$suegiu: 50px 0;
+$stile:none ;
+$stile2:'IBM Plex Sans Thai Looped', sans-serif;
+$back:rgb(255, 253, 253);
+$titoloni: 'Bungee', cursive;
+
+@mixin interpolate ($modifica,$valore){
+    text-#{$modifica}:$valore;
+
+}
+@mixin interpola ($modifica,$valore){
+    font-#{$modifica}:$valore;
+
+}
+
+#corpop{
+   @include interpolate ("align", center);
+   @include interpola ('size', 1.3em);
+   background-color:$back;
+    color:set-contrast-color($back);
+   
+   h1{
+       @include interpola ("size", 1.9em);
+       color: $coloresf;
+       margin-bottom: $sotto ;
+   }
+   h2{@include interpola ("size", 1.7em);
+    margin-top:40px;
+    margin-bottom: 20px;
+    color: $coloresf;
+
+   }
+   p{
+       font-family: $stile2;
+       
+   }
+   h3{
+       
+       
+       @include interpolate('align', left);
+      
+   }
+   #solo{
+       text-align: center;
+       color: black;
+       text-shadow: none;
+   }
+   #corpop > *{
+    background-color:$back;
+    color:set-contrast-color($back);
+   }
+   
+}
+h1, h2, h3{
+    font-family:$titoloni;
+}
+
+i{
+    @include interpola ("size", 25px);
+    color: $colore;
+}
+
+#impaginazione{
+    margin-top: 130px;
+    
+}
+nav{
+    background-color: $coloresf;
+    color: $colore;
+}
+
+aside{background-color:$back;
+    color:set-contrast-color($back);
+    margin: $suegiu;
+    width: 900px;}
+    
+
+#footer{
+    background-color: $coloresf;
+}
+#spingialato{
+    @include interpolate ("decoration", none);
+    color: $colore;
+}
+#carta, #carta2{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+}
+#carta2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

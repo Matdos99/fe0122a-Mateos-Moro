@@ -1,0 +1,8 @@
+@function set-contrast-color($colore){
+    @if (lightness($colore) >50){
+        @return black;
+    }
+    @else{
+        @return white;
+    }
+}
