@@ -1,0 +1,57 @@
+body {
+    background-image:url(/assets/img/mani.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width:1400px){
+    body{
+        background-image: none;
+    }
+}
+.display{
+    box-sizing: border-box;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 30vh;
+    grid-template-columns:repeat(4, 100px);
+    grid-template-rows:minmax(100px,auto) repeat(5, 90px);
+    margin-top: 400px;
+   
+
+}
+.fuori{
+    grid-column: 1/-1;
+    background-color: rgb(45, 185, 45);
+    word-wrap: break-word;
+    word-break: break-all;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding:  5px 15px;
+    font-size: 40px;
+    border: white solid 1px;
+    
+}
+
+button{
+    background-color: rgb(4, 128, 4);
+    outline: none;
+    font-size: 25px;
+    border: white solid 1px;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(19, 247, 19);
+
+}
+#r1-1{
+    grid-column: span 2;
+}
+#r5-3{
+    grid-column: span 2;
+}
