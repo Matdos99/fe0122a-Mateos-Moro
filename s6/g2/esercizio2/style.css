@@ -1,0 +1,15 @@
+#scacchiera{
+    width: 800px;
+    height: 797px;
+    border: black 1px solid;
+    
+}
+.casella{
+    width: 100px;
+    height: 100px;
+    
+    display: inline-block;
+    
+    margin-bottom: -4px;
+}
+

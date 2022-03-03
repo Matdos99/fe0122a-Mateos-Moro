@@ -1,0 +1,26 @@
+#barra{
+    position: relative;
+    background-image: url(homer.jpeg);
+    /*background-color: aqua;*/
+    background-size:cover;
+    height: 300px;
+    width: 0;
+    
+}
+#text{
+    position: absolute;
+    top: 50%;
+    left:10%;
+    color: white;
+    font-size: 50px;
+}
+#confine{
+    width: 1000px;
+    border: solid black 1px;
+}
+button{
+    color: black;
+    background-color: yellow;
+    font-size: 70px;
+    
+}

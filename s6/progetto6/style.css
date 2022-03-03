@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 18px Verdana;
+	color: #FFF;
+  background-image: url(img/logo2.jpeg);
+  background-size: 100%;
+  background-position: 30%;
+  background-repeat: no-repeat;
+}
+#picbox {
+	margin: 200px auto;
+	width: 770px;
+	height: 770px;
+}
+#boxcard {
+	z-index: 1;
+	margin: 10px 0 0;
+}
+#boxcard div{
+	float: left;
+	width: 180px;
+	height: 180px;
+	margin: 5px;
+	
+	border: 1px solid #EE872A;
+	cursor: pointer;
+	
+	box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  background-image: url(img/logo.jpeg);
+  background-size: 180px 180px;
+	z-index: 2;
+}
+#boxcard div img {
+	display: none;
+    z-index: 3;
+	width: 100%;
+	height: 100%;
+}
+#boxbuttons {
+	text-align: center;
+	margin: 20px;
+	display: block;
+}
+#boxbuttons .button {
+	color: rgb(230, 230, 132);
+	background: #72c23d;
+	padding: 5px 10px;
+	margin: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#boxbuttons .button:hover {
+	font-weight: bolder;
+	font-style: oblique;
+}
+span{
+	font-size: 40px;
+}
