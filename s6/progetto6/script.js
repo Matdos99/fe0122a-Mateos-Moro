@@ -21,7 +21,7 @@ function RandomFunction(Max, Min) {
     return Math.round(Math.random() * (Max - Min) + Min);
 }
 
-function ShuffleImages() {
+function mescolaImg() {
     var ImgAll = $(Source).children();
     var ImgThis = $(Source + " div:first-child");
     var ImgArr = new Array();
@@ -43,10 +43,11 @@ function ShuffleImages() {
 }
 
 function ResetGame() {
-    ShuffleImages();
+    mescolaImg();
     $(Source + " div img").hide();
     $(Source + " div").css("visibility", "visible");
     Counter = 0;
+    $('a').text()
     $("#success").remove();
     $("#counter").html("" + Counter);
     BoxOpened = "";
@@ -79,6 +80,7 @@ function OpenCard() {
                     ImgOpened = "";
                 }, 400);
             } else {
+                $('a').text('Resetta')
                 ImgFound++;
                 BoxOpened = "";
                 ImgOpened = "";
@@ -105,5 +107,5 @@ $(function () {
         });
     }
     $(Source + " div").click(OpenCard);
-    ShuffleImages();
+    mescolaImg();
 });
