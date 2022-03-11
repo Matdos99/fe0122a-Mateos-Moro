@@ -80,7 +80,7 @@ function OpenCard() {
                     ImgOpened = "";
                 }, 400);
             } else {
-                $('a').text('Resetta')
+
                 ImgFound++;
                 BoxOpened = "";
                 ImgOpened = "";
@@ -95,7 +95,9 @@ function OpenCard() {
 
         if (ImgFound == ImgSource.length) {
             alert('Bravo, hai battuto il coniglio')
+            $('a').text('Resetta')
         }
+
     }
 }
 
