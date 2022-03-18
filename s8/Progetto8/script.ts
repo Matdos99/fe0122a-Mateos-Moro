@@ -1,3 +1,4 @@
+let arrayClass: any = []
 fetch('Abbigliamento.json')
     .then(response => response.json())
     .then(data => {
@@ -6,10 +7,13 @@ fetch('Abbigliamento.json')
             arrayClass.push(veste)
 
         })
+        console.log(arrayClass)
+        console.log(arrayClass[0])
+        console.log('Questo è lo sconto sul pezzo ' + arrayClass[0].id + ' del valore di ' + arrayClass[0].getSaldoCapo() + ' euro')
+        console.log('Il prezzo che pagherai in cassa è di ' + arrayClass[0].getAcquistoCapo() + ' euro')
 
     })
 
-let arrayClass: any = []
 
 
 class Capi {
@@ -57,7 +61,3 @@ arrayClass.push(scarpe)
 
 
 
-
-console.log(arrayClass[0])
-console.log('Questo è lo sconto sul pezzo ' + arrayClass[0].id + ' del valore di ' + arrayClass[0].getSaldoCapo() + ' euro')
-console.log('Il prezzo che pagherai in cassa è di ' + arrayClass[0].getAcquistoCapo() + ' euro')

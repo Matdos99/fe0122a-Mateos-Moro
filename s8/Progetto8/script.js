@@ -1,3 +1,4 @@
+var arrayClass = [];
 fetch('Abbigliamento.json')
     .then(function (response) { return response.json(); })
     .then(function (data) {
@@ -5,8 +6,11 @@ fetch('Abbigliamento.json')
         var veste = new Capi(vestiti.id, vestiti.codprod, vestiti.collezione, vestiti.capo, vestiti.modello, vestiti.quantita, vestiti.colore, vestiti.prezzoivaesclusa, vestiti.prezzoivainclusa, vestiti.disponibile, vestiti.saldo);
         arrayClass.push(veste);
     });
+    console.log(arrayClass);
+    console.log(arrayClass[0]);
+    console.log('Questo è lo sconto sul pezzo ' + arrayClass[0].id + ' del valore di ' + arrayClass[0].getSaldoCapo() + ' euro');
+    console.log('Il prezzo che pagherai in cassa è di ' + arrayClass[0].getAcquistoCapo() + ' euro');
 });
-var arrayClass = [];
 var Capi = /** @class */ (function () {
     function Capi(a, b, c, d, e, f, g, h, i, l, m) {
         this.id = a;
@@ -35,6 +39,3 @@ var scarpe = new Capi(8, 1965, 'estate', 'scarpe', 2003, 6, 'nere', 55.37, 70.99
 arrayClass.push(giubotto);
 arrayClass.push(maglietta);
 arrayClass.push(scarpe);
-console.log(arrayClass[0]);
-console.log('Questo è lo sconto sul pezzo ' + arrayClass[0].id + ' del valore di ' + arrayClass[0].getSaldoCapo() + ' euro');
-console.log('Il prezzo che pagherai in cassa è di ' + arrayClass[0].getAcquistoCapo() + ' euro');
