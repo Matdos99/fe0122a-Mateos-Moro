@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Template-Form</h2>
+  <div class="row">
+    <div class="col">
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group">
+          <label for="nome"></label>
+          <input type="text" id="nome" required name="nome" ngModel class="form-controll" #name="ngModel">
+          <div *ngIf="name.invalid && name.touched" class="alert alert-danger mt-1" role="alert">
+            Campo Obbligatorio
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="alterEgo">Alter Ego</label>
+          <input type="text" id="alterEgo" required ngModel name="alterEgo" class="form-controll" #alterEgo="ngModel">
+          <div *ngIf="alterEgo.invalid && name.touched" class="alert alert-danger mt-1" role="alert">
+            Campo Obbligatorio
+          </div>
+          <div class="form-group">
+            <label for="power">SuperPower</label>
+            <select name="power" id="power" required ngModel #power="ngModel" class="form-select" aria-label="Esempio-predefinito">
+<option selected> seleziona il tuo potere</option>
+<option *ngFor="let pote of poteri" value="power">{{pote}}</option>
+            </select>
+            <div *ngIf="power.invalid && power.touched" class="alert alert-danger mt-1" role="alert">
+              Campo Obbligatorio
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nemico">nemico
+            </label>
+            <input type="text" id="nemico" required ngModel name="nemico" class="form-controll" #nemico="ngModel">
+
+          </div>
+          <div class="form-group">
+            <label for="planet"></label>
+            <input type="text" id="planet" name="planet" required minlength="10" ngModel #planet="ngModel">
+          </div>
+          <div *ngIf="planet.errors && planet.touched" class="alert alert-danger mt-1" role="alert">
+            <span *ngIf="planet.errors['required']">Campo Obbligatorio</span>
+            <span *ngIf="planet.errors['minlength']">Campo di {{planet.errors['minlength'].actualLength == 1 ? planet.errors['minlength'].actualLength + 'carattere': planet.errors['minlength'].actualLength + 'carattere'}}, 'deve essere di almeno {{planet.errors['minlength'].requireLength}} caratteri</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="debolezza">Weakness</label>
+          <input type="text" id="debolezza" name="depolezza" ngModel class="form-controll">
+        </div>
+        <div class="row">
+          <div class="col d-grid gap-2">
+            <button type="submit" disable="form.invalid" class="btn btn-primary mt-2"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

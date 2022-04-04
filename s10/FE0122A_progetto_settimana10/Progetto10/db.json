@@ -1,0 +1,22 @@
+{
+  "product":[
+    {
+      "id":1,
+      "name":"Samsung Galaxy s22",
+      "price": 1400,
+      "description":"l'ultimo SamsungGalaxy"
+    },{"id":2,
+      "name":"OnePlus Nord",
+      "price": 320,
+      "description":"Primo modello Nord"
+    },{"id":3,
+      "name":"Iphone x",
+      "price": 800,
+      "description":"rivoluzione Apple"
+    },{"id":4,
+      "name":"wiko",
+      "price": 2,
+      "description":"telefono bengalese 2 euro"
+    }
+  ]
+}

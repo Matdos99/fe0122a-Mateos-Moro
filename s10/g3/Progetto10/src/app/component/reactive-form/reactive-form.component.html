@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Reactive-Forms</h2>
+  <div class="row">
+    <div class="col">
+      <form formGroup="form" (ngSubmit)="submit()">
+        <div class="form-group">
+          <label for="nome">
+              nome
+        </label>
+        <input type="text" id="nome" required formControlName="nome" class="form-control">
+        <div *ngIf="controlloForm('nome').invalid && controlloForm('nome').touched" class="alert alert-danger mt-1" role="alert">
+          Campo obbligatorio
+        </div>
+        </div>
+        <div class="form-group">
+          <label for="alterEgo">
+              alter ego
+        </label>
+        <input type="text" id="alterEgo" required formControlName="alterEgo" class="form-control">
+        <div *ngIf="controlloForm('alterEgo').invalid && controlloForm('alterEgo').touched" class="alert alert-danger mt-1" role="alert">
+          Campo obbligatorio
+        </div>
+      </div>
+             <div formArrayName="poteri" class="form-group">
+         <label for="poteri"></label>
+           <button type="button" class="btn btn-primary" (click)="aggiungiPoteri()">Aggiungi</button>
+           <div class="form-group" *ngFor="let item of restituisciArray('poteri'); let i = index ">
+             <input type="text" formControlName="i" class="form-control">
+           </div>
+          </div>
+          <div class="form-group">
+            <label for="nemico">Nemico</label>
+          <input id="nemico" maxlength="10" formControlName="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="planet"></label>
+            <input type="text" id="planet" required minlength="5" formControlName="planet" class="form-control">
+            <div *ngIf="controlloForm('planet').errors && controlloForm('planet').touched" class="alert alert-danger mt-1" role="alert">
+              <span *ngIf="controlloErrori('planet', 'required')">Campo obbligatorio</span>
+              <span *ngIf="controlloErrori('planet', 'minlength')">
+                  Campo di {{controlloErrori('planet', 'minlength').actualLength == 1 ? controlloErrori('planet', 'minLength').actualLength + ' carattere' : controlloErrori('planet', 'minLength').actualLength + ' caratteri'}}, deve essere minimo di {{controlloErrori('planet', 'minLength').requiredLength}} caratteri.
+              </span>
+          </div>
+          </div>
+          <div formArrayName="debolezza" class="form-group">
+            <label for="debolezza">Debolezza</label>
+            <button type="button" id="debolezza" name="debolezza" class="btn btn-primary" (click)="aggiungiDebolezza()">aggiungi</button>
+
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

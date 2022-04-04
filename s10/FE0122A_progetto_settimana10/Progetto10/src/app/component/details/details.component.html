@@ -1,0 +1,16 @@
+<div  class="container">
+  <div id="posi">
+    <div *ngFor="let item of product, let i=index">
+      <div >
+        <div >
+          <h4 id="first">{{item.name}}</h4>
+          <p id="placetext">Descrizione articolo:</p>
+
+            <p id="place">{{item.description}}</p>
+            <p id="price"><strong>Prezzo:</strong>${{item.price}}</p>
+<button class="" (click)="addtoCart(item)" (click)="removeItemDetails(item)" routerLink="/carrello" routerLinkActive="active">aggiungi</button>
+
+        </div>
+    </div>
+  </div>
+</div>

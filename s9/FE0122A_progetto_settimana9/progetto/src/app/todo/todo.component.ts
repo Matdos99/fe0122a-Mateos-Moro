@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { FormBuilder } from '@angular/forms'
-import { Task } from '../models/Task';
 import { CompletedComponent } from '../completed/completed.component';
+import { Task } from '../models/Task';
+import { leggi } from '../todo.service';
 
 
 
@@ -9,10 +10,13 @@ import { CompletedComponent } from '../completed/completed.component';
   selector: 'app-todo',
   templateUrl: './todo.component.html'
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent{
 completed: boolean= false
+
+
   taskList:Task[]=[]
 newTodoForm = this.formBuilder.group({todoItem: ''})
+
 
   constructor(
     private formBuilder: FormBuilder
@@ -23,9 +27,6 @@ newTodoForm = this.formBuilder.group({todoItem: ''})
      this.taskList.push({id:this.taskList.length, title:value, completed:true})
      console.log(this.taskList)
    }
-
-  ngOnInit(): void {
-  }
 
 
   markDone(value: any) {

@@ -1,0 +1,12 @@
+<div  *ngFor="let pro of product" class="user-container">
+<div  id="place" class="card" style="width:18rem">
+  <div class="card-body">
+    <h4 class="card-title">{{pro.name}}</h4>
+
+      <a class="card-link" (click)="addtoDetail(pro)" routerLink="/detail" routerLinkActive="active">Dettagli</a>
+      <button class="btn btn-primary" (click)="addtoCart(pro)">Aggiungi</button>
+
+
+  </div>
+</div>
+</div>

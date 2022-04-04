@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "post-card.component.scss"
+    ],
+    "names": [],
+    "file": "post-card.component.css"
+}

@@ -1,8 +1,7 @@
-import { TodoService } from './../todo.service';
 import { Task } from './../models/Task';
 import { Component, OnInit } from '@angular/core';
 
-import { TodoComponent } from '../todo/todo.component';
+import { leggi } from '../todo.service';
 
 @Component({
   selector: 'app-completed',
@@ -11,15 +10,18 @@ import { TodoComponent } from '../todo/todo.component';
 })
 
 
-export class CompletedComponent implements OnInit {
-taskList:Task[]= []
+export class CompletedComponent implements OnInit{
+taskList!:Task[]
 
-  constructor(private todoService: TodoService) { }
+  constructor() {
+    leggi().then((task)=> {
+      //this.taskList= task
+    })
+   }
 
-getTask():void{
-  this.todoService= this.todoService
+  ngOnInit(): void {
+
+  }
+
 }
 
-  ngOnInit(){}
-
-}
