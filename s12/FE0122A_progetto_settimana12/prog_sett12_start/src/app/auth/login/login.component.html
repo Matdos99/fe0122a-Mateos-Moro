@@ -1,0 +1,23 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <div class="space">
+        <label for="email">Email Utente</label>
+        <th></th>
+        <input type="email" name="email" ngModel placeholder="email" #email="ngModel" required>
+      </div>
+      <th></th>
+      <div class="space">
+        <label for="password">Password Utente</label>
+        <th></th>
+        <input type="password" name="password" ngModel placeholder="password" #password="ngModel" required>
+        <th></th>
+      </div>
+      <div class="space"><button class="btn" type="submit">Accedi</button></div>
+      <div>
+        <p>Non sei registrato? Fallo subito a <a routerLink="/registration" routerLinkActive="active">questo link</a></p>
+      </div>
+      </form>
+
+  </div>
+</div>

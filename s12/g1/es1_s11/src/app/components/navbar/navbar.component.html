@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-white">
+  <div class="container-fluid">
+    <div id="navbar">
+      <a href="javascript:void(0)" class="navbar-brand">UL</a>
+      <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/active-post" routerLinkActive="active">attivi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/inactive-post" routerLinkActive="active">inattivi</a>
+        </li>
+        <li  *ngIf="user" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/users" routerLinkActive="active">lista utenti</a>
+        </li>
+        <li  *ngIf="!user" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">login</a>
+        </li>
+        <li  *ngIf="!user" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/registration" routerLinkActive="active">registrati</a>
+        </li>
+      </ul>
+      <h6 *ngIf="user">
+        Benvenuto{{user.users}}
+      </h6>
+      <button *ngIf="user" (click)="logout()" class="btn btn-danger">logout</button>
+    </div>
+  </div>
+</nav>
