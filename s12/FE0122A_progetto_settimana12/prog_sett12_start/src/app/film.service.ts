@@ -14,17 +14,28 @@ export interface filmData{
       "title": string,
       "vote_average": number
     }
+export interface filmFavourite{
+
+    "movieId": number,
+    "userId": number,
+    "id": number
+  }
+
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class FilmService {
+  private filmData =new BehaviorSubject<null |filmData>(null)
+  film$ = this.filmData.asObservable()
 
   film!:AuthData[]
 
 
   url='http://localhost:4201'
+
 
 
 
@@ -36,7 +47,7 @@ export class FilmService {
 
   getAll(){
     return this.auths.user$.pipe(switchMap(user=>{
-      return this.http.get<any>(`${this.url}/moviesPopular`, {headers:new HttpHeaders({
+      return this.http.get<any>(`${this.url}/movie/popular`, {headers:new HttpHeaders({
         "Authorization":`Bearer ${user?.accessToken}`
       })})
     }))
@@ -45,6 +56,8 @@ export class FilmService {
   }
 
   addFavourite(){
-
-  }
+    return this.auths.user$.pipe(switchMap(user=>{
+      return this.http.post<AuthData>(`${this.url}/favorites`, user)
+    }))
+}
 }

@@ -29,7 +29,7 @@ this.AuthSrv.user$.subscribe(data=> this.user=data)
     }
     catch(error){
       this.isLoading=false
-      console.log(error)
+      console.log(form.value)
       form.reset()
     }
   }

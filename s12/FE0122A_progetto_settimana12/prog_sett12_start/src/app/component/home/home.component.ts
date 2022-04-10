@@ -1,9 +1,11 @@
-import { filmData } from './../../film.service';
+import { filmData, filmFavourite } from './../../film.service';
 import { AuthService } from './../../auth/auth.service';
 
 import { Component, OnInit } from '@angular/core';
 import { FilmService } from 'src/app/film.service';
-import { style } from '@angular/animations';
+import { PartialObserver } from 'rxjs';
+
+
 
 
 @Component({
@@ -12,8 +14,8 @@ import { style } from '@angular/animations';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  film!:filmData[]
-
+  film!:filmFavourite[]|any
+isLoading=false
 color:any='white'
 
   constructor(private filmS: FilmService) { }
@@ -27,8 +29,31 @@ color:any='white'
     )
   }
 
+  addFavorite(data: any){
+    this.filmS.addFavourite().subscribe(data=>{console.log(data)
+    this.film=data})}
+
+       /* async addFavourite(data:filmFavourite){
+          this.isLoading=true
+          try{
+
+            await this.addFavourite(data)
+          }
+          catch(error){
+            this.isLoading=false
+            console.log(error)
+            console.log(data)
+          }
+
+          }*/
+        }
 
 
 
 
-}
+
+
+
+
+
+

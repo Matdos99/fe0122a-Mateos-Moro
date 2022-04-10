@@ -1,5 +1,5 @@
 <mat-grid-list cols="3"rowHeight="1:1">
-<mat-grid-tile *ngFor="let item of film"> <div >
+<mat-grid-tile *ngFor="let item of film" (click)="addFavorite(item)"> <div >
     <div>
       <img src="http://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="">
    </div>

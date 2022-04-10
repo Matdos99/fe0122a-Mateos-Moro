@@ -8,12 +8,12 @@
 
 <ul class="menu">
   <div *ngIf="isLoggedIn">
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/user" routerLinkActive="active">User</a></li>
+    <li><a class="btn" routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a class="btn" routerLink="/user" routerLinkActive="active">User</a></li>
   </div>
   <div *ngIf="!isLoggedIn">
-    <li><a  [routerLinkActiveOptions]="{exact:true}" routerLink="/login" routerLinkActive="active">Login</a></li>
-    <li><a routerLink="/registration" routerLinkActive="active">Registrati</a></li>
+    <li><a  class="btn" [routerLinkActiveOptions]="{exact:true}" routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a class="btn" routerLink="/registration" routerLinkActive="active">Registrati</a></li>
   </div>
 </ul>
 <button *ngIf="isLoggedIn" id="logout" class="btn btn-danger" (click)="logout()">Logout</button>

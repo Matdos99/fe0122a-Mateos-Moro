@@ -23,6 +23,24 @@
       "movieId": 578701,
       "userId": 2,
       "id": 2
+    },
+    {
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdEBpby5jb20iLCJpYXQiOjE2NDk2MzEzOTIsImV4cCI6MTY0OTYzNDk5Miwic3ViIjoiMyJ9.m7j3_ReIWWOP0ISIRKfnw48KlufMvYhvn9Jbv1zDKkc",
+      "user": {
+        "email": "mat@io.com",
+        "nome": "Mateos",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdEBpby5jb20iLCJpYXQiOjE2NDk2MzEzOTIsImV4cCI6MTY0OTYzNDk5Miwic3ViIjoiMyJ9.m7j3_ReIWWOP0ISIRKfnw48KlufMvYhvn9Jbv1zDKkc",
+      "user": {
+        "email": "mat@io.com",
+        "nome": "Mateos",
+        "id": 3
+      },
+      "id": 4
     }
   ],
   "genres": [
@@ -103,7 +121,7 @@
       "name": "Western"
     }
   ],
-  "moviesPopular": [
+  "movies-popular": [
     {
       "adult": false,
       "backdrop_path": "/6ELCZlTA5lGUops70hKdB83WJxH.jpg",
