@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 isLoading=false
+errorMessage=undefined
 user!:AuthData|null
   constructor(private AuthSrv:AuthService, private route:Router) { }
 
@@ -25,10 +26,12 @@ user!:AuthData|null
     try{
       this.isLoading=false
       await this.AuthSrv.registration(form.value).toPromise()
+      form.reset
       this.route.navigate(['/login'])
-    }catch(error){
+    }catch(error:any){
       console.log(error)
-      form.reset()
+      this.errorMessage=error.error
+
       this.isLoading=false
     }
 

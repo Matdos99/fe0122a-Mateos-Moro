@@ -1,5 +1,8 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{errorMessage}}
+    </div>
     <form #form="ngForm" (ngSubmit)="login(form)">
       <div class="space">
         <label for="email">Email Utente</label>

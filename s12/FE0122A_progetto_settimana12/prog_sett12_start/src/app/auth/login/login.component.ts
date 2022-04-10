@@ -12,6 +12,7 @@ import { AuthData } from '../auth.service';
 export class LoginComponent implements OnInit {
   isLoading=false
 user!:AuthData|null
+errorMessage=undefined
 
   constructor(private AuthSrv: AuthService, private route:Router) { }
 
@@ -27,10 +28,10 @@ this.AuthSrv.user$.subscribe(data=> this.user=data)
       console.log(form)
       this.route.navigate(['/home'])
     }
-    catch(error){
+    catch(error:any){
       this.isLoading=false
+      this.errorMessage=error.error
       console.log(form.value)
-      form.reset()
     }
   }
 

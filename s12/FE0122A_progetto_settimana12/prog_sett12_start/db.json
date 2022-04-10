@@ -41,6 +41,15 @@
         "id": 3
       },
       "id": 4
+    },
+    {
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdEBpby5jb20iLCJpYXQiOjE2NDk2MzI1NzcsImV4cCI6MTY0OTYzNjE3Nywic3ViIjoiMyJ9.lJjz1mu_itgLD7juNxJnawgjz2asQk1iSRIEX_Oc9LU",
+      "user": {
+        "email": "mat@io.com",
+        "nome": "Mateos",
+        "id": 3
+      },
+      "id": 5
     }
   ],
   "genres": [
