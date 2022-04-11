@@ -30,8 +30,17 @@ color:any='white'
   }
 
   addFavorite(data: any){
-    this.filmS.addFavourite().subscribe(data=>{console.log(data)
-    this.film=data})}
+    this.filmS.addFavourite(data).subscribe(data=>{console.log(data)
+  })
+
+}
+
+  deleteFavourite(data:any){
+    this.filmS.deleteFavorite(data).subscribe(data=>{console.log(data)})}
+
+}
+
+
 
        /* async addFavourite(data:filmFavourite){
           this.isLoading=true
@@ -46,7 +55,6 @@ color:any='white'
           }
 
           }*/
-        }
 
 
 

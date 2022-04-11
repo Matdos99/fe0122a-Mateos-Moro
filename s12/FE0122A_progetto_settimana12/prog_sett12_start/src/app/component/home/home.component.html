@@ -8,7 +8,7 @@
 <mat-grid-list cols="3"rowHeight="1:1">
 
 
-<mat-grid-tile *ngFor="let item of film" (click)="addFavorite(item)"> <div >
+<mat-grid-tile *ngFor="let item of film" > <div >
     <div>
       <img src="http://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="">
    </div>
@@ -26,7 +26,10 @@
 
 
 
-      <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+      <svg (click)="addFavorite(item)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg>
+      <svg (click)="deleteFavourite(item)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
         <path fill-rule="evenodd"  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
       </svg>
 

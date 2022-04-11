@@ -28,10 +28,11 @@ export interface filmFavourite{
   providedIn: 'root'
 })
 export class FilmService {
-  private filmData =new BehaviorSubject<null |filmData>(null)
-  film$ = this.filmData.asObservable()
+  private filmDat =new BehaviorSubject<null |filmData>(null)
+  film$ = this.filmDat.asObservable()
 
   film!:AuthData[]
+  filmFav!:filmFavourite[]
 
 
   url='http://localhost:4201'
@@ -55,9 +56,20 @@ export class FilmService {
 
   }
 
-  addFavourite(){
-    return this.auths.user$.pipe(switchMap(user=>{
-      return this.http.post<AuthData>(`${this.url}/favorites`, user)
-    }))
+  addFavourite(user:any){
+
+      return this.http.post(`${this.url}/favorites`, user).pipe(tap((user:any)=>{
+        this.filmDat.next(user)
+      }))}
+
+
+  deleteFavorite(user:any){
+    return this.http.delete(`${this.url}/favorites`, user).pipe(map((user:any)=>{
+      this.filmDat.next(user)
+
+  }))}
+
+
 }
-}
+
+

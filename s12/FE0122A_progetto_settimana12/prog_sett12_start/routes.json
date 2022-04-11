@@ -5,5 +5,5 @@
   "/favorites": "/favorites",
   "/reset": "/reset",
   "movies-popular":660,
-  "movies-toprated": 660
+  "movies-favorites": 660
 }
