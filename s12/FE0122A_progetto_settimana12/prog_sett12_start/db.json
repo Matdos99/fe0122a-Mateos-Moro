@@ -23,66 +23,6 @@
       "movieId": 578701,
       "userId": 2,
       "id": 2
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/fPGeS6jgdLovQAKunNHX8l0avCy.jpg",
-      "genre_ids": [
-        28,
-        53,
-        10752
-      ],
-      "id": 567189,
-      "original_language": "en",
-      "original_title": "Tom Clancy's Without Remorse",
-      "overview": "John Kelly, un ex membro dei Navy SEAL, nel tentativo di vendicare l’omicidio di sua moglie, si ritroverà invischiato in una cospirazione ben più grande e pericolosa di quanto avrebbe potuto mai immaginare.",
-      "popularity": 1840.479,
-      "poster_path": "/zisnDuZBQWzio4ylon8AElnat7V.jpg",
-      "release_date": "2021-04-29",
-      "title": "Senza rimorso",
-      "video": false,
-      "vote_average": 7.3,
-      "vote_count": 999
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/6ELCZlTA5lGUops70hKdB83WJxH.jpg",
-      "genre_ids": [
-        28,
-        14,
-        12
-      ],
-      "id": 460465,
-      "original_language": "en",
-      "original_title": "Mortal Kombat",
-      "overview": "Un pugile fallito scopre un segreto di famiglia che lo conduce ad un torneo mistico chiamato Mortal Kombat. Qui incontra un gruppo di guerrieri che combattono fino alla morte per salvare i regni dal malvagio stregone Shang Tsung.",
-      "popularity": 1909.664,
-      "poster_path": "/iW03OMEI3htIAV1P8FwM867PLIj.jpg",
-      "release_date": "2021-04-07",
-      "title": "Mortal Kombat",
-      "video": false,
-      "vote_average": 7.6,
-      "vote_count": 2659
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/mYM8x2Atv4MaLulaV0KVJWI1Djv.jpg",
-      "genre_ids": [
-        28,
-        80,
-        53
-      ],
-      "id": 804435,
-      "original_language": "en",
-      "original_title": "Vanquish",
-      "overview": "",
-      "popularity": 1583.635,
-      "poster_path": "/1jkNM1NHyHsxiBBuOlOeqgmidM0.jpg",
-      "release_date": "2021-04-16",
-      "title": "Vanquish",
-      "video": false,
-      "vote_average": 6,
-      "vote_count": 105
     }
   ],
   "genres": [
