@@ -1,0 +1,43 @@
+<body>
+  <div id="container" *ngIf="clientSource">
+    <mat-table [dataSource]="clientSource.content">
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        <ng-container matColumnDef="numero">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Numero</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row?.numero}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="anno">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Anno</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row?.anno}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="cliente">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>ragioneSociale</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row.cliente?.ragioneSociale}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="importo">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Importo</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row?.importo}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="stato">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Stato</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row?.stato?.nome}}</mat-cell>
+        </ng-container>
+     <ng-container matColumnDef="button">
+          <mat-header-cell  *matHeaderCellDef mat-sort-header></mat-header-cell>
+          <mat-cell class="button" *matCellDef="let row">
+            <button id="change" routerLink="/new-bill/{{row.id}}" class="btn">modifica</button>
+            <button class="btn btn-danger"  (click)="popUp(row.id)">cancella</button>
+          </mat-cell>
+     </ng-container>
+      </mat-table>
+      <mat-paginator
+      [length]="clientSource.totalElements"
+      [pageSize]="clientSource.pageable.pageSize"
+      [pageSizeOptions]="[10,20]"
+      (page)="pageEvent=$event; onPaginateChange($event)"
+      showFirstLastButtons lastPage>
+
+      </mat-paginator>
+  </div>
+</body>

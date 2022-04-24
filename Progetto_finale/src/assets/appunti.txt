@@ -1,0 +1,7 @@
+richiesta progetto finale:
+1. funzione di login +
+2. dopo il login l'applicazione deve andare sulla lista utenti  +
+3. scheda clienti con specificato id, ragione sociale, email e partita iva
+4. scheda clienti deve cancellare, modificare e aggiungere clienti, oltre che vedere le sue fatture
+5. per ogni cliente ci deve essere la funzionalita di vedere le fatture relative al cliente, aggiungere nuove fatture, modificare le informazioni e la possibilita di cancellare le fatture
+6. quando vai sulle fatture si possono aggiungere nuove fatture, modificarle e eliminarle

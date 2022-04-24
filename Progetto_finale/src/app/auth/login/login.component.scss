@@ -1,0 +1,44 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #87CEFA;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+   border-radius: 10px;
+   z-index: 2;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+position: relative;
+top:-13px ;
+left: 76%;
+}
+
+.btn{
+ position: relative;
+ top:49px ;
+ left: 43%;
+ width: 83px;
+ height: 50px;
+font-size: 19px;
+color: white;
+}
+.alert{
+  text-align: center;
+width: 600px;
+border-radius:10px ;}
+
+

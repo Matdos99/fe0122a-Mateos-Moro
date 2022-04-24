@@ -1,0 +1,37 @@
+<body>
+  <div id="container" *ngIf="dataSource">
+    <h1>Benvenuto {{this.user.username}}</h1>
+    <mat-table [dataSource]="dataSource.content">
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        <ng-container matColumnDef="id">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="username">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Username</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row.username}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="email">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row.email}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="roles">
+             <mat-header-cell *matHeaderCellDef mat-sort-header>Roles</mat-header-cell>
+             <mat-cell *matCellDef="let row">{{row.roles[0]?.roleName}}</mat-cell>
+        </ng-container>
+      </mat-table>
+      <mat-paginator
+      [length]="dataSource.totalElements"
+      [pageSize]="dataSource.pageable.pageSize"
+      [pageSizeOptions]="[10,20]"
+      (page)="pageEvent=$event; onPaginateChange($event)"
+      showFirstLastButtons lastPage>
+
+      </mat-paginator>
+  </div>
+</body>
+
+
+
+

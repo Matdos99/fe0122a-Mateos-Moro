@@ -1,0 +1,48 @@
+<body>
+  <div id="container">
+    <mat-table [dataSource]="clientSource?.content">
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      <ng-container matColumnDef="id">
+           <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+           <mat-cell class="item" *matCellDef="let row">{{row.id}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="ragioneSociale">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Username</mat-header-cell>
+           <mat-cell class="item" *matCellDef="let row">{{row.ragioneSociale}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="tipoCliente">
+           <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+           <mat-cell class="item"  *matCellDef="let row">{{row.email}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="telefonoContatto">
+           <mat-header-cell *matHeaderCellDef mat-sort-header>Partita IVA</mat-header-cell>
+           <mat-cell class="item" *matCellDef="let row">{{row.partitaIva}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="button">
+        <mat-header-cell id="add" *matHeaderCellDef mat-sort-header>
+          <button routerLink="/new-bill" class="btn btn-primary">Nuova Fattura</button>
+          <button  class="btn btn-primary" routerLink="/new-client" routerLinkActive="active">aggiungi</button></mat-header-cell>
+        <mat-cell class="button" *matCellDef="let row" (click)="popUp(row.id)">
+          <button id="bill" routerLink="/fatture/{{row.id}}" class="btn ">fatture</button>
+          <button id="change" routerLink="/new-client/{{row.id}}" class="btn ">modifica</button>
+          <button class="btn btn-danger">cancella</button>
+        </mat-cell>
+    </ng-container>
+
+
+
+    </mat-table>
+    <mat-paginator
+        [length]="clientSource?.totalElements"
+        [pageSize]="clientSource?.pageable?.pageSize"
+        [pageSizeOptions]="[10,20]"
+        (page)="pageEvent=$event; onPaginateChange($event)"
+        showFirstLastButtons lastPage>
+
+        </mat-paginator>
+  </div>
+</body>
+
+
+
