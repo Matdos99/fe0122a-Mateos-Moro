@@ -1,25 +1,32 @@
 <body>
-  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-  <div class="form-group">
-    <label class="form-label" for="numero">Fattura Numero:</label>
-    <input name="numero" ngModel="{{bill?.numero}}" type="number" class="form-control" value="{{bill?.numero}}" placeholder="Numero Fattura">
-    <label class="form-label" for="anno">Anno</label>
-    <input name="anno" ngModel="{{bill?.anno}}"  type="number" class="form-control" value="{{bill?.anno}}" placeholder="Anno">
-    <label class="form-label" for="importo">Importo</label>
-    <input name="importo" ngModel="{{bill?.importo}}" type="number" class="form-control" value="{{bill?.importo}}" placeholder="Importo">
-    <div ngModelGroup="stato" name="stato">
-      <label class="form-label" for="nome">Stato Pagamento</label>
-      <select  class="form-control" name="id" ngModel="{{bill?.stato?.id}}" >
-        <option value="{{bill?.stato?.id}}">{{bill?.stato?.nome}}</option>
-        <option value="1">PAGATA</option>
-        <option value="2">NON PAGATA</option>
-      </select>
+  <div id="cont">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="form-group">
+      <label class="form-label" for="numero">Fattura Numero:</label>
+      <input name="numero" ngModel="{{bill?.numero}}" type="number" class="form-control" value="{{bill?.numero}}" placeholder="Numero Fattura">
+      <label class="form-label" for="anno">Data:</label>
+      <input name="data" ngModel="{{bill?.data}}"  type="date" class="form-control" value="{{bill?.data}}" placeholder="Anno">
+      <label class="form-label" for="anno">Anno:</label>
+      <input name="anno" ngModel="{{bill?.anno}}"  type="year" class="form-control" value="{{bill?.anno}}" placeholder="Anno">
+      <label class="form-label" for="importo">Importo:</label>
+      <input name="importo" ngModel="{{bill?.importo}}" type="number" class="form-control" value="{{bill?.importo}}" placeholder="Importo">
+      <div ngModelGroup="stato" name="stato">
+        <label class="form-label" for="nome">Stato Pagamento:</label>
+        <select  class="form-control" name="id" ngModel="{{bill?.stato?.id}}" >
+          <option value="{{bill?.stato?.id}}">{{bill?.stato?.nome}}</option>
+          <option value="1">PAGATA</option>
+          <option value="2">NON PAGATA</option>
+        </select>
+      </div>
+      <div id="id" ngModelGroup="cliente" name="cliente">
+        <label for="idCliente">Immeti l'id del cliente:</label>
+        <input  type="text" #id="ngModel"  ngModel="{{theseId}}" name="id" value="{{theseId}}" >
+      </div>
     </div>
-    <div id="id" ngModelGroup="cliente" name="cliente">
-      <label for="idCliente">Immeti l'id del cliente:</label>
-      <input  type="text" #id="ngModel"  ngModel="{{theseId}}" name="id" value="{{theseId}}" >
+    <button class="btn btn-primary" [disabled]="" type="submit">aggiungi</button>
+    </form>
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{errorMessage}}
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">aggiungi</button>
-  </form>
 </body>

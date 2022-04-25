@@ -19,11 +19,7 @@ export class BillsComponent implements OnInit {
   text:any=''
 
   constructor(private srv:UserService,private router:Router, private route:ActivatedRoute) {
-    this.router.events.subscribe((e: any) => {
-      if (e["routerEvent"] != undefined) {
-        this.ngOnInit()
-        }
-    })
+    
    }
 id:any
 Oneid:any

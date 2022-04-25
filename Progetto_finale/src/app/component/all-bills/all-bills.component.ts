@@ -17,11 +17,7 @@ export class AllBillsComponent implements OnInit {
   displayedColumns: string[] = ['numero', 'anno','cliente', 'importo', 'stato', 'button']
 
   constructor(private srv:UserService, private route:ActivatedRoute, private router:Router) {
-    this.router.events.subscribe((e: any) => {
-      if (e["routerEvent"] != undefined) {
-       this.ngOnInit()
-        }
-    })
+    
    }
 id:any
 Oneid:any

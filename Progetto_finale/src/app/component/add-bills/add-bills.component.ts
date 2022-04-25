@@ -15,6 +15,8 @@ export class AddBillsComponent implements OnInit {
   id!:any
   bill!:bill
   theseId:any=''
+  errorMessage:any= undefined
+  isLoadingIn=false
 
   constructor(private srv:UserService,  private router:Router, private route:ActivatedRoute) { }
 
@@ -30,14 +32,21 @@ export class AddBillsComponent implements OnInit {
 
 
   async onSubmit(form:NgForm){
+    this.isLoadingIn=true
 
     try{
-      await this.srv.Bills(this.id, form.value).subscribe(data=>{
-      console.log(data)})
-      this.router.navigate(['/fatture/'+ this.bill.cliente?.id])
+      this.isLoadingIn=false
+      await this.srv.Bills(this.id, form.value).toPromise()
+      
+        this.router.navigate(['/fatture/'+ this.theseId])
+        
     }catch(error:any){
+      this.errorMessage=error.error.error
+      this.isLoadingIn=false
       console.log(error)
       console.log(form.value)
+      
+      
     }
 }
 

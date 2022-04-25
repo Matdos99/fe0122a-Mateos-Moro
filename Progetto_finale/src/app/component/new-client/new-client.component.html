@@ -1,87 +1,93 @@
 <body>
-  <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <div class="form-group">
-      <div class="form-outline mb-4">
-        <label for="ragioneSociale">Ragione Sociale*</label>
-        <input ngModel="{{clientData?.ragioneSociale}}" name="ragioneSociale"  type="text" class="form-control"  value="{{clientData?.ragioneSociale}}" class="form-control" placeholder="Ragione Sociale">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="partitaIva">Partita IVA*</label>
-        <input type="text" ngModel="{{clientData?.partitaIva}}" name="partitaIva" value="{{clientData?.partitaIva}}" class="form-control" placeholder="Partita IVA">
-      </div>
-     <div class="form-outline mb-4">
-        <label for="tipoCliente">Tipo Cliente*</label>
-        <select ngModel="{{clientData?.tipoCliente}}" name="tipoCliente" id="">
-          <option value="{{clientData?.tipoCliente}}">{{clientData?.tipoCliente}}</option>
-          <option value="SRL">SRL</option>
-          <option value="SPA">SPA</option>
-          <option value="SAS">SAS</option>
-          <option value="PA">PA</option>
-        </select>
-     </div>
-      <tr></tr>
-      <div class="form-outline mb-4">
-        <label for="email">Email*</label>
-        <input type="email" ngModel="{{clientData?.email}}" name="email" class="form-control" value="{{clientData?.email}}" placeholder="Email">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="pec">Pec</label>
-        <input ngNoModel type="text" ngModel="{{clientData?.pec}}" name="pec" value="{{clientData?.pec}}" class="form-control" placeholder="Pec">
-      </div>
-      <div class="form-outline mb-4" >
-        <label for="telefono">Tel</label>
-        <input ngNoModel type="tel" ngModel="{{clientData?.telefono}}" name="telefono" value="{{clientData?.telefono}}" class="form-control" placeholder="Tel">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="nomeContatto">Nome Contatto</label>
-        <input ngNoModel type="text" ngModel="{{clientData?.nomeContatto}}" name="nomeContatto"  value="{{clientData?.nomeContatto}}" class="form-control" placeholder="Nome Contatto">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="cognomeContatto">Cognome Contatto</label>
-        <input ngNoModel type="text" ngModel="{{clientData?.cognomeContatto}}" name="cognomeContatto" value="{{clientData?.cognomeContatto}}" class="form-control" placeholder="Cognome Contatto">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="telefonoContatto">Tel. Contatto</label>
-        <input ngNoModel type="tel" ngModel="{{clientData?.telefonoContatto}}" name="telefonoContatto" value="{{clientData?.telefonoContatto}}" class="form-control" placeholder="Tel. Contatto">
-      </div>
-      <div class="form-outline mb-4">
-        <label for="emailContatto">Email Contatto*</label>
-        <input type="email" ngModel="{{clientData?.emailContatto}}" name="emailContatto" value="{{clientData?.emailContatto}}" class="form-control" placeholder="Email Contatto">
-      </div>
-      <div ngModelGroup="indirizzoSedeOperativa" >
+  <div id="cont">
+    <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
         <div class="form-outline mb-4">
-          <label for="via">Via</label>
-          <input type="text" name="via" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.via}}" value="{{clientData?.indirizzoSedeOperativa?.via}}" class="form-control"  placeholder="Via">
+          <label for="ragioneSociale">Ragione Sociale*</label>
+          <input ngModel="{{clientData?.ragioneSociale}}" name="ragioneSociale"  type="text" class="form-control"  value="{{clientData?.ragioneSociale}}" class="form-control" placeholder="Ragione Sociale">
         </div>
         <div class="form-outline mb-4">
-          <label for="civico">Civico</label>
-          <input type="text" name="civico" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.civico}}" value="{{clientData?.indirizzoSedeOperativa?.civico}}" class="form-control" placeholder="Civico">
+          <label for="partitaIva">Partita IVA*</label>
+          <input type="text" ngModel="{{clientData?.partitaIva}}" name="partitaIva" value="{{clientData?.partitaIva}}" class="form-control" placeholder="Partita IVA">
         </div>
-        <div class="form-outline mb-4">
-          <label class="form-label" for="cap">Cap</label>
-          <input type="text" name="cap" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.cap}}" value="{{clientData?.indirizzoSedeOperativa?.cap}}" class="form-control" placeholder="Cap">
-        </div>
-        <div class="form-outline mb-4">
-          <label for="localita">Localita</label>
-          <input type="text" name="localita" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.localita}}" value="{{clientData?.indirizzoSedeOperativa?.localita}}" class="form-control" placeholder="Localita">
-        </div>
-        <div ngModelGroup="comune" #nome="ngModelGroup" class="form-outline mb-4">
-          <label class="form-label" for="comune">Comune*</label>
-          <select id="">
-            <option name="id" [ngModel]="item.id"  *ngFor="let item of comune?.content" [attr.selected]="clientData && item.nome===clientData.indirizzoSedeOperativa?.comune?.nome" value="{{item.id}}">{{item.nome}}</option>
+       <div class="form-outline mb-4">
+          <label for="tipoCliente">Tipo Cliente*</label>
+          <select ngModel="{{clientData?.tipoCliente}}" name="tipoCliente" id="">
+            <option value="{{clientData?.tipoCliente}}">{{clientData?.tipoCliente}}</option>
+            <option value="SRL">SRL</option>
+            <option value="SPA">SPA</option>
+            <option value="SAS">SAS</option>
+            <option value="PA">PA</option>
           </select>
-          <div ngModelGroup="provincia" #sigla="ngModelGroup" class="form-outline mb-4">
-          <label class="form-label" for="provincia">Provincia*</label>
-          <select id="">
-            <option name="id" [ngModel]="item.id" *ngFor="let item of provincia?.content" value="{{item.id}}">{{item.sigla}}</option>
-          </select>
+       </div>
+        <tr></tr>
+        <div class="form-outline mb-4">
+          <label for="email">Email*</label>
+          <input type="email" ngModel="{{clientData?.email}}" name="email" class="form-control" value="{{clientData?.email}}" placeholder="Email">
         </div>
+        <div class="form-outline mb-4">
+          <label for="pec">Pec</label>
+          <input ngNoModel type="text" ngModel="{{clientData?.pec}}" name="pec" value="{{clientData?.pec}}" class="form-control" placeholder="Pec">
         </div>
-
-      </div>
-
-
+        <div class="form-outline mb-4" >
+          <label for="telefono">Tel</label>
+          <input ngNoModel type="tel" ngModel="{{clientData?.telefono}}" name="telefono" value="{{clientData?.telefono}}" class="form-control" placeholder="Tel">
+        </div>
+        <div class="form-outline mb-4">
+          <label for="nomeContatto">Nome Contatto</label>
+          <input ngNoModel type="text" ngModel="{{clientData?.nomeContatto}}" name="nomeContatto"  value="{{clientData?.nomeContatto}}" class="form-control" placeholder="Nome Contatto">
+        </div>
+        <div class="form-outline mb-4">
+          <label for="cognomeContatto">Cognome Contatto</label>
+          <input ngNoModel type="text" ngModel="{{clientData?.cognomeContatto}}" name="cognomeContatto" value="{{clientData?.cognomeContatto}}" class="form-control" placeholder="Cognome Contatto">
+        </div>
+        <div class="form-outline mb-4">
+          <label for="telefonoContatto">Tel. Contatto</label>
+          <input ngNoModel type="tel" ngModel="{{clientData?.telefonoContatto}}" name="telefonoContatto" value="{{clientData?.telefonoContatto}}" class="form-control" placeholder="Tel. Contatto">
+        </div>
+        <div class="form-outline mb-4">
+          <label for="emailContatto">Email Contatto*</label>
+          <input type="email" ngModel="{{clientData?.emailContatto}}" name="emailContatto" value="{{clientData?.emailContatto}}" class="form-control" placeholder="Email Contatto">
+        </div>
+        <div ngModelGroup="indirizzoSedeOperativa" >
+          <div class="form-outline mb-4">
+            <label for="via">Via</label>
+            <input type="text" name="via" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.via}}" value="{{clientData?.indirizzoSedeOperativa?.via}}" class="form-control"  placeholder="Via">
+          </div>
+          <div class="form-outline mb-4">
+            <label for="civico">Civico</label>
+            <input type="text" name="civico" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.civico}}" value="{{clientData?.indirizzoSedeOperativa?.civico}}" class="form-control" placeholder="Civico">
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="cap">Cap</label>
+            <input type="text" name="cap" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.cap}}" value="{{clientData?.indirizzoSedeOperativa?.cap}}" class="form-control" placeholder="Cap">
+          </div>
+          <div class="form-outline mb-4">
+            <label for="localita">Localita</label>
+            <input type="text" name="localita" ngNoModel ngModel="{{clientData?.indirizzoSedeOperativa?.localita}}" value="{{clientData?.indirizzoSedeOperativa?.localita}}" class="form-control" placeholder="Localita">
+          </div>
+          <div ngModelGroup="comune" #nome="ngModelGroup" class="form-outline mb-4">
+            <label class="form-label" for="comune">Comune*</label>
+            <select id="">
+              <option name="id" [ngModel]="item.id"  *ngFor="let item of comune?.content" [attr.selected]="clientData && item.nome===clientData.indirizzoSedeOperativa?.comune?.nome" value="{{item.id}}">{{item.nome}}</option>
+            </select>
+            <div ngModelGroup="provincia" #sigla="ngModelGroup" class="form-outline mb-4">
+            <label class="form-label" for="provincia">Provincia*</label>
+            <select id="">
+              <option name="id" [ngModel]="item.id" *ngFor="let item of provincia?.content" value="{{item.id}}">{{item.sigla}}</option>
+            </select>
+          </div>
+          </div>
+  
+        </div>
+  
+  
+    </div>
+    <button type="submit" class="btn btn-primary" >Aggiungi</button>
+    </form>
+    <div id="error"  *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    {{errorMessage}}
   </div>
-  <button type="submit" class="btn btn-primary" >Aggiungi</button>
-  </form>
+  </div>
+  
 </body>

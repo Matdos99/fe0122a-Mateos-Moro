@@ -24,7 +24,7 @@
           <button routerLink="/new-bill" class="btn btn-primary">Nuova Fattura</button>
           <button  class="btn btn-primary" routerLink="/new-client" routerLinkActive="active">aggiungi</button></mat-header-cell>
         <mat-cell class="button" *matCellDef="let row" (click)="popUp(row.id)">
-          <button id="bill" routerLink="/fatture/{{row.id}}" class="btn ">fatture</button>
+          <button id="bill" routerLink="/fatture/{{row?.id}}" class="btn ">fatture</button>
           <button id="change" routerLink="/new-client/{{row.id}}" class="btn ">modifica</button>
           <button class="btn btn-danger">cancella</button>
         </mat-cell>

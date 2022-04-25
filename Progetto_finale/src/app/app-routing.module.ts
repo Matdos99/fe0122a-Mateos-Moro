@@ -58,7 +58,7 @@ const optionrouting: ExtraOptions = {
 }
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, optionrouting),  AuthModule],
+  imports: [RouterModule.forChild(routes),  AuthModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

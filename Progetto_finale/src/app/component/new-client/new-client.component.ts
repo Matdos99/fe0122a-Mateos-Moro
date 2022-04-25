@@ -21,6 +21,7 @@ export class NewClientComponent implements OnInit {
   clientData!: Client
   comuni!:any
   isLoadingIn=false
+  errorMessage=undefined
 
   constructor(private srv: UserService, private route: ActivatedRoute, private fb: FormBuilder, private router:Router) { }
 
@@ -60,6 +61,7 @@ export class NewClientComponent implements OnInit {
       this.router.navigate(['/client'])
     }catch(error:any){
       this.isLoadingIn=false
+      this.errorMessage=error.error.error
 
       console.log(error)
       console.log(form.value)
