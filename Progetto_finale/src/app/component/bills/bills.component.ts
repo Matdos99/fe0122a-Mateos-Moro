@@ -28,6 +28,14 @@ Oneid:any
 this.getBillS()
   }
 
+  resetPage(){
+    this.router.routeReuseStrategy.shouldReuseRoute= () => false;
+    this.router.onSameUrlNavigation= 'reload';
+    this.router.navigate(['./'], {
+      relativeTo: this.route
+  })}
+
+
   getBillS(){
 this.srv.getBill(this.id, 0, 20).pipe( map((billData:BillData)=>{this.clientSource=billData})).subscribe()
   }
@@ -43,7 +51,8 @@ this.srv.getBill(this.id, 0, 20).pipe( map((billData:BillData)=>{this.clientSour
 
   popUp(id:number){
     if(confirm("Sei sicuro di voler cancellare?"))
-    {this.deleteClientBill(id)}
+    {this.deleteClientBill(id)
+    this.resetPage()}
   }
 
   async deleteClientBill(Oneid:number){

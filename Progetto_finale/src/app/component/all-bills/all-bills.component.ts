@@ -39,7 +39,8 @@ this.srv.getallBill(0, 20).pipe(tap(users=> console.log(users)), map((billData:B
 
   popUp(id:number){
     if(confirm("Sei sicuro di voler cancellare?"))
-    {this.deleteClientBill(id)}
+    {this.deleteClientBill(id)
+    this.resetPage()}
   }
 
   async deleteClientBill(Oneid:number){
@@ -52,10 +53,11 @@ this.srv.getallBill(0, 20).pipe(tap(users=> console.log(users)), map((billData:B
 
    }}
 
-
-   onChangeUr1() {
-
-    }
-
+   resetPage(){
+    this.router.routeReuseStrategy.shouldReuseRoute= () => false;
+    this.router.onSameUrlNavigation= 'reload';
+    this.router.navigate(['./'], {
+      relativeTo: this.route
+  })}
 
 }

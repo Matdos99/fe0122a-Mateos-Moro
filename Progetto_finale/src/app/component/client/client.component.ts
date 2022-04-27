@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { UserService} from './../../user.service';
 import { AuthService } from './../../auth/auth.service';
@@ -19,12 +19,7 @@ displayedColumns: string[]=['id', 'ragioneSociale', 'tipoCliente', 'telefonoCont
 id!:number
 
 
-  constructor(private srv:UserService, private route:Router) {
-    this.route.events.subscribe((e: any) => {
-      if (e["routerEvent"] != undefined) {
-       this.initDataSource()
-        }
-    })
+  constructor(private srv:UserService, private router:Router, private route:ActivatedRoute) {
    }
 
   ngOnInit(): void {
@@ -46,17 +41,23 @@ this.initDataSource()
   popUp(id:number){
     if(confirm("Sei sicuro di voler cancellare?"))
     {this.deleteCliente(id)
-    //this.route.navigate(['/client'])
+      this.resetPage()
   }
   }
 
+  resetPage(){
+    this.router.routeReuseStrategy.shouldReuseRoute= () => false;
+    this.router.onSameUrlNavigation= 'reload';
+    this.router.navigate(['/client'], {
+      relativeTo: this.route
+  })}
 
 
    async deleteCliente(id:number){
      try{
      await this.srv.deleteClient(id).subscribe()
 
-     this.route.navigate([this.route.url])
+     this.router.navigate([this.route.url])
       console.log(id)
     }
     catch(error){
